@@ -5,3 +5,11 @@
         background: #{$val};
     }
 }
+
+// Text colors
+
+@each $key, $val in $colors {
+    .t-#{$key} {
+        color: $val !important;
+    }
+}

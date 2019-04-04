@@ -21,6 +21,7 @@
         overflow: auto;
     }
 }
+
 .go-article {
     margin-top: 4 * $default-space;
     margin-bottom: 4 * $default-space;
@@ -64,7 +65,7 @@
 .article-footer,
 .card-footer {
     align-items: stretch;
-    border-top: 1px solid $color-dark;
+    border-top: 1px solid $color-m-1;
     display: flex;
     padding-top: $default-space;
 }
