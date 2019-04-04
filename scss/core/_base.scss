@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box !important;
+    outline: 0 !important;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: $default-font-size;
+    line-height: $default-line-height;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: $default-font-family;
+    font-size: 1rem;
+    font-weight: $default-font-weight;
+    margin: 0;
+}
+
+a {
+    color: $color-b-0;
+    text-decoration: none;
+}
+
+.go-body {
+    display: flex;
+    flex-direction: column;
+    /* height and min-height is workaround for footer in ie11 */
+    height: 100%;
+    min-height: 100vh;
+
+    .body-header {
+        color: inherit;
+    }
+
+    .body-content {
+        display: flex;
+        flex: 1 0 auto;
+        width: 100%;
+    }
+
+    .body-footer {
+        display: flex;
+        padding: $default-space;
+        position: relative;
+    }
+}

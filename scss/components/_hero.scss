@@ -1,0 +1,15 @@
+/* Hero */
+.go-hero {
+    display: flex;
+    flex-direction: column;
+    overflow: auto !important;
+    padding: $default-space;
+    width: 100%;
+
+    > * {
+        margin: auto !important;
+        /* ie 11 */
+        text-align: center;
+        width: 100%;
+    }
+}

@@ -1,0 +1,139 @@
+/* Navigation menu */
+
+.go-nav {
+    align-items: center;
+    box-sizing: border-box;
+    color: $color-dark;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0;
+    position: relative;
+
+    a {
+        color: $color-dark;
+        text-decoration: none !important;
+    }
+
+    .nav-list {
+        display: block;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-item {
+        color: $color-dark;
+        display: inline-block;
+        margin: 0;
+        padding: $default-space $default-space;
+        position: relative;
+        word-break: break-all;
+        white-space: nowrap;
+
+        &:hover {
+            background: $color-dark;
+            color: $color-lite;
+        }
+    }
+
+    .nav-header {
+        display: block;
+        padding: $default-space $default-space;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .nav-toggle {
+        color: $color-dark;
+        display: none;
+        padding: $default-space $default-space;
+        text-align: center;
+        white-space: nowrap;
+    }
+}
+
+.go-nav {
+    &.nav-scrollable {
+        flex-wrap: nowrap;
+        overflow-y: hidden;
+        overflow-x: auto;
+        white-space: nowrap;
+
+        // hide x-scrollbar for horizontal nav
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+.go-nav {
+    &.nav-vertical {
+        flex-direction: column;
+        height: 100vh;
+        width: auto;
+
+        .nav-list {
+            text-align: center;
+        }
+
+        .nav-item {
+            display: block;
+        }
+
+        &.nav-scrollable {
+            flex-wrap: nowrap;
+            /* height: 100vh; */
+            overflow-y: auto;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+    }
+}
+
+/* Nav responsive style */
+@each $bp-name, $bp-size in $breakpoints {
+    @include breakpoint-max($bp-size) {
+        .nav-expand-#{$bp-name} {
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav-list {
+                display: none;
+            }
+
+            &.nav-vertical {
+                .nav-header {
+                    display: none;
+                }
+            }
+
+            &.nav-open {
+                flex-wrap: wrap !important;
+
+                .nav-list {
+                    display: block;
+                    text-align: center;
+                    width: 100%;
+                }
+
+                .nav-item {
+                    display: block;
+                }
+            }
+
+            &.nav-vertical {
+                &.nav-open {
+                    flex-wrap: nowrap !important;
+
+                    .nav-header,
+                    .nav-list {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

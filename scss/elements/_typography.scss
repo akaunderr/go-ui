@@ -1,0 +1,277 @@
+/* Typography */
+
+.font-family-inherit {
+    font-family: inherit;
+}
+.font-size-inherit {
+    font-size: inherit;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    margin: 1rem 0;
+    word-break: break-word;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: $heading-line-height !important;
+}
+
+.h1,
+h1 {
+    font-size: 2.25rem;
+}
+
+.h2,
+h2 {
+    font-size: 2rem;
+}
+
+.h3,
+h3 {
+    font-size: 1.75rem;
+}
+
+.h4,
+h4 {
+    font-size: 1.5rem;
+}
+
+.h5,
+h5 {
+    font-size: 1.25rem;
+}
+
+.h6,
+h6 {
+    font-size: 1rem;
+}
+
+cite {
+    font-style: italic;
+    text-align: right;
+
+    &::before {
+        content: ' - ';
+    }
+}
+
+p {
+    margin: 1rem 0;
+    word-break: break-word;
+    // word-wrap: break-word;
+
+    &.magnify {
+        font-size: $font-md;
+    }
+}
+
+code,
+.code,
+kbd,
+pre,
+samp {
+    font-family: monospace !important;
+    font-size: 0.9rem;
+}
+
+blockquote {
+    border-left: 4px solid $color-m-0;
+    display: block;
+    margin: 1rem 0;
+    overflow: auto;
+    padding: 1rem;
+    word-break: break-word;
+
+    p {
+        margin-top: 0;
+    }
+}
+
+code,
+.code {
+    color: $color-r-0;
+    vertical-align: bottom;
+    word-break: break-word;
+
+    a > & {
+        color: inherit;
+    }
+}
+
+kbd {
+    background: $color-dark;
+    border-radius: 3px;
+    color: $color-lite;
+    padding: 0.1rem 0.2rem;
+}
+
+mark,
+.mark {
+    border-radius: 3px;
+    color: $color-dark;
+    display: inline-block;
+    font-size: 90%;
+    margin: 0 0.2rem;
+    padding: 0.2rem 0.3rem;
+    line-height: $default-line-height;
+}
+
+mark {
+    background: $color-y-1;
+}
+
+.mark {
+    background: $color-m-2;
+}
+
+pre {
+    background: $color-m-2;
+    margin: 1rem 0;
+    overflow: auto;
+    padding: 1rem;
+
+    code,
+    .code {
+        word-break: normal;
+        color: $color-b-0;
+    }
+
+    &.pre-scrollable {
+        max-height: $pre-scrollable-max-height;
+        overflow-y: scroll;
+    }
+}
+
+// Text utilities
+
+.text-hide {
+    background: transparent;
+    border: 0;
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
+    text-shadow: none;
+}
+
+.text-lowercase {
+    text-transform: lowercase !important;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.text-capitalize {
+    text-transform: capitalize !important;
+}
+
+.text-regular {
+    font-weight: normal !important;
+}
+
+.text-bold {
+    font-weight: bold !important;
+}
+
+.text-italic {
+    font-style: italic !important;
+}
+
+// Text overflows
+
+.text-ellipsis {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+}
+
+.text-clip {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+}
+
+.text-break-word {
+    word-break: break-word;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.text-break-all {
+    word-break: break-all !important;
+}
+
+// Text sizes
+
+@each $key, $val in $default-font-sizes {
+    .text-#{$key} {
+        font-size: $val !important;
+    }
+}
+
+// Text colors
+
+@each $key, $val in $colors {
+    .#{$key} {
+        color: $val !important;
+    }
+}
+
+// Lists
+
+.list-reset {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ol,
+ul,
+dl {
+    list-style-type: disc inside;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    padding-left: 1rem;
+}
+
+dl dt {
+    font-weight: bold;
+}
+
+dl dd {
+    margin: 0.4rem 0 0.8rem 0;
+}
+
+ul {
+    list-style-type: disc inside;
+}
+
+ol {
+    list-style-type: decimal inside;
+}
+
+ul ul {
+    list-style-type: circle;
+}
+
+ol ol {
+    list-style-type: lower-alpha;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+    margin-bottom: 0;
+}

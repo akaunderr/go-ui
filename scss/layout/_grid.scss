@@ -1,0 +1,92 @@
+/* Grid layout */
+
+.go-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2 * $default-space;
+    padding-right: 2 * $default-space;
+    width: 100%;
+}
+
+.go-grid {
+    align-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .go-unit {
+        flex: 1;
+        max-width: 100%;
+
+        &:not(:first-child) {
+            padding-left: $default-space;
+        }
+
+        &:not(:last-child) {
+            padding-right: $default-space;
+        }
+    }
+
+    &.grid-reverse {
+        flex-direction: row-reverse;
+    }
+
+    &.grid-gapless {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        & > .go-unit {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+
+    &.grid-nowrap {
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+    }
+}
+
+.go-unit {
+    &.unit-size-auto {
+        flex: none;
+        width: auto;
+    }
+
+    @for $i from 1 through $grid-len {
+        &.unit-size-#{$i} {
+            flex: none;
+            width: ($i / $grid-len) * 100%;
+        }
+    }
+
+    @for $i from 1 through $grid-len {
+        &.unit-offset-#{$i} {
+            margin-left: ($i / $grid-len) * 100%;
+        }
+    }
+}
+
+@each $bp-name, $bp-size in $breakpoints {
+    .go-unit {
+        @include breakpoint-max($bp-size) {
+            &.unit-size-auto-#{$bp-name} {
+                flex: none;
+                width: auto;
+            }
+
+            @for $i from 1 through $grid-len {
+                &.unit-size-#{$i}-#{$bp-name} {
+                    flex: none;
+                    width: ($i / $grid-len) * 100%;
+                }
+            }
+
+            @for $i from 1 through $grid-len {
+                &.unit-offset-#{$i}-#{$bp-name} {
+                    margin-left: ($i / $grid-len) * 100%;
+                }
+            }
+        }
+    }
+}

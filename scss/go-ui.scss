@@ -1,0 +1,40 @@
+@charset 'UTF-8';
+// Variables
+
+@import 'core/config';
+
+/*!
+ * go-ui v#{$version} | MIT License | https://github.com/underr-ua/go-ui
+ * Copyright 2019 Andrii Burkatskyi aka underr
+ *
+ * normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
+ */
+
+@import 'utilities/root';
+@import 'core/normalize';
+
+// Mixins
+@import 'mixins/breakpoint';
+// @import 'mixins/clearfix';
+@import 'mixins/media';
+@import 'mixins/spacing';
+
+@import 'core/base';
+@import 'utilities/border';
+@import 'utilities/background';
+@import 'utilities/display';
+@import 'utilities/overflow';
+@import 'utilities/position';
+@import 'utilities/spacing';
+
+@import 'layout/grid';
+
+@import 'elements/media';
+@import 'elements/typography';
+
+@import 'components/accordion';
+@import 'components/breadcrumb';
+@import 'components/entries';
+@import 'components/hero';
+@import 'components/nav';
+@import 'components/tag';

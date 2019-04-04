@@ -1,0 +1,93 @@
+/* Images, video, visual effects */
+
+.bg-image {
+    background: inherit;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+// Background-image zoom
+
+.hover-zoom {
+    float: left;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+    background-size: 100% !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &:hover {
+        background-size: 110% !important;
+    }
+}
+
+.img-responsive {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.img-cover {
+    object-fit: cover;
+}
+
+.img-contain {
+    object-fit: contain;
+}
+
+.go-media {
+    & img,
+    & video {
+        display: block;
+        height: auto;
+        max-width: 100%;
+        margin: $min-space;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+
+        &.thumbnail {
+            padding: $min-space;
+            background: #fff;
+            border: 1px solid $color-m-0;
+            box-sizing: border-box;
+        }
+    }
+}
+
+.go-media {
+    & video {
+        &::before {
+            content: none;
+            display: block;
+        }
+
+        iframe,
+        object,
+        embed {
+            border: 0;
+            bottom: 0;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+        }
+    }
+}
+
+@for $i from 1 through $grid-len {
+    @include media('', $i, $grid-len);
+}
+
+@each $bp-name, $bp-size in $breakpoints {
+    @include breakpoint-max($bp-size) {
+        @for $i from 1 through $grid-len {
+            @include media($bp-name, $i, $grid-len);
+        }
+    }
+}

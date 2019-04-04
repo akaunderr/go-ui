@@ -1,0 +1,37 @@
+// Margin and padding mixin
+@mixin spacing($spacer-type, $spacer-px, $spacer-id, $breakpoint-id: none) {
+    $pos: padding;
+    @if ($spacer-type == 'm') {
+        $pos: margin;
+    }
+
+    @if ($spacer-type == 'm' or ($spacer-type == 'p' and $spacer-id != auto)) {
+        @if ($breakpoint-id != none) {
+            $spacer-id: #{$spacer-id}-#{$breakpoint-id};
+        }
+
+        .#{$spacer-type}-#{$spacer-id} {
+            #{$pos}: $spacer-px !important;
+        }
+
+        .#{$spacer-type}t-#{$spacer-id},
+        .#{$spacer-type}y-#{$spacer-id} {
+            #{$pos}-top: $spacer-px !important;
+        }
+
+        .#{$spacer-type}r-#{$spacer-id},
+        .#{$spacer-type}x-#{$spacer-id} {
+            #{$pos}-right: $spacer-px !important;
+        }
+
+        .#{$spacer-type}b-#{$spacer-id},
+        .#{$spacer-type}y-#{$spacer-id} {
+            #{$pos}-bottom: $spacer-px !important;
+        }
+
+        .#{$spacer-type}l-#{$spacer-id},
+        .#{$spacer-type}x-#{$spacer-id} {
+            #{$pos}-left: $spacer-px !important;
+        }
+    }
+}

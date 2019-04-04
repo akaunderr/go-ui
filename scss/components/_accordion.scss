@@ -1,0 +1,37 @@
+.go-accordion {
+    padding: 0 $default-space;
+
+    .accordion-header:hover {
+        cursor: pointer;
+    }
+
+    .accordion-toggle {
+        display: none;
+
+        &:checked ~ .accordion-header:after,
+        ~ .accordion-header:after {
+            float: right;
+            font-family: monospace;
+        }
+
+        ~ .accordion-header:after {
+            content: '+';
+        }
+
+        &:checked ~ .accordion-header:after {
+            content: '-';
+        }
+
+        ~ .accordion-content {
+            max-height: 0;
+            opacity: 0;
+            overflow: auto;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:checked ~ .accordion-content {
+            max-height: 50vh;
+            opacity: 1;
+        }
+    }
+}

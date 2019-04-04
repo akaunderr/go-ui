@@ -1,0 +1,16 @@
+// Margin and padding spacing
+$spacing: m p;
+
+@each $i in $spacing {
+    @each $sp-id, $sp-px in $spacers {
+        @include spacing($i, $sp-px, $sp-id, none);
+    }
+
+    @each $bp-name, $bp-size in $breakpoints {
+        @include breakpoint-max($bp-size) {
+            @each $sp-id, $sp-px in $spacers {
+                @include spacing($i, $sp-px, $sp-id, $bp-name);
+            }
+        }
+    }
+}

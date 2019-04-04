@@ -1,0 +1,56 @@
+/* Borders */
+
+.border {
+    border-style: solid;
+    border-width: $default-border-width;
+}
+
+.border-thin {
+    border-width: 1px !important;
+}
+
+.border-thick {
+    border-width: 4px !important;
+}
+
+.border-top {
+    border-top-style: solid;
+    border-top-width: $default-border-width;
+}
+
+.border-right {
+    border-right-style: solid;
+    border-right-width: $default-border-width;
+}
+
+.border-bottom {
+    border-bottom-style: solid;
+    border-bottom-width: $default-border-width;
+}
+
+.border-left {
+    border-left-style: solid;
+    border-left-width: $default-border-width;
+}
+
+.border-none {
+    border-width: 0;
+}
+
+.border-rounded {
+    border-radius: 3px;
+}
+
+.border-not-rounded {
+    border-radius: 0;
+}
+
+.border-circle {
+    border-radius: 50%;
+}
+
+@each $color, $value in $border-colors {
+    .border-#{$color} {
+        border-color: #{$value};
+    }
+}
