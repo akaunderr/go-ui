@@ -2,14 +2,26 @@
 .go-hero {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     overflow: auto !important;
     padding: $default-space;
-    width: 100%;
+    // width: 100%;
+    word-break: break-word;
 
-    > * {
-        margin: auto !important;
+    .hero-title {
+        display: block;
         /* ie 11 */
+        -ms-grid-row-align: center;
+        align-self: center;
+        // margin: auto !important;
         text-align: center;
-        width: 100%;
+        // width: 100%;
+    }
+
+    .hero-subtitle {
+        display: block;
+        -ms-grid-row-align: center;
+        text-align: center;
+        align-self: center;
     }
 }

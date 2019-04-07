@@ -2,13 +2,15 @@
     $a: ($index / $grid-len) * 100%;
     $b: 2 * $min-space;
 
-    @if ($bp-name == '') {
-        .go-media.media-size-#{$index} {
-            max-width: calc(#{$a} - #{$b});
-        }
-    } @else {
-        .go-media.media-size-#{$index}-#{$bp-name} {
-            max-width: calc(#{$a} - #{$b});
+    .go-media {
+        @if ($bp-name == '') {
+            &.unit-#{$index} {
+                max-width: calc(#{$a} - #{$b});
+            }
+        } @else {
+            &.unit-#{$index}-#{$bp-name} {
+                max-width: calc(#{$a} - #{$b});
+            }
         }
     }
 }

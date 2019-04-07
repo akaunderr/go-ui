@@ -93,7 +93,8 @@
 }
 
 /* Nav responsive style */
-@each $bp-name, $bp-size in $breakpoints {
+@each $bp-name,
+$bp-size in $breakpoints {
     @include breakpoint-max($bp-size) {
         .nav-expand-#{$bp-name} {
             .nav-toggle {

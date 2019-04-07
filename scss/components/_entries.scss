@@ -32,8 +32,8 @@
     padding: $default-space;
 }
 
-.article-header,
-.card-header {
+.article-title,
+.card-title {
     font-weight: bold;
     line-height: $heading-line-height;
     padding: 0;
@@ -45,7 +45,7 @@
     }
 }
 
-.article-summary,
+.article-abstract,
 .article-meta,
 .card-meta {
     font-size: $font-sm;
@@ -76,36 +76,4 @@
     background-repeat: no-repeat;
     vertical-align: middle;
     width: 100%;
-}
-
-.go-notepaper {
-    display: flex;
-    flex-direction: column;
-    margin: $default-space;
-
-    .notepaper-header {
-        background: rgba(0, 0, 0, 0.05);
-        border-bottom: 1px dashed $color-dark;
-        font-weight: bold;
-        overflow-wrap: break-word;
-        padding: $default-space/2 $default-space;
-        text-align: center;
-        word-break: break-word;
-        word-wrap: break-word;
-        vertical-align: middle;
-    }
-
-    .notepaper-content {
-        height: 100%;
-        padding: $default-space/2 $default-space;
-        text-align: left;
-        word-break: break-word;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        overflow-y: auto;
-
-        &::-webkit-scrollbar {
-            display: none;
-        }
-    }
 }

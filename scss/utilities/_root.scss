@@ -4,7 +4,6 @@
     @each $color, $value in $colors {
         --c-#{$color}: #{$value};
     }
-    --c-none: transparent;
     @each $bp, $value in $breakpoints {
         --breakpoint-#{$bp}: #{$value};
     }

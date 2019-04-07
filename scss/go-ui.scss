@@ -15,20 +15,11 @@
 
 // Mixins
 @import 'mixins/breakpoint';
-// @import 'mixins/clearfix';
 @import 'mixins/media';
 @import 'mixins/spacing';
 
 @import 'core/base';
-@import 'utilities/border';
-@import 'utilities/color';
-@import 'utilities/display';
-@import 'utilities/overflow';
-@import 'utilities/position';
-@import 'utilities/spacing';
-
 @import 'layout/grid';
-
 @import 'elements/media';
 @import 'elements/typography';
 
@@ -38,3 +29,10 @@
 @import 'components/hero';
 @import 'components/nav';
 @import 'components/tag';
+
+@import 'utilities/border';
+@import 'utilities/color';
+@import 'utilities/display';
+@import 'utilities/overflow';
+@import 'utilities/position';
+@import 'utilities/spacing';

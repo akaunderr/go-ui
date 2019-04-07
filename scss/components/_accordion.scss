@@ -1,24 +1,24 @@
 .go-accordion {
     padding: 0 $default-space;
 
-    .accordion-header:hover {
+    .accordion-title:hover {
         cursor: pointer;
     }
 
     .accordion-toggle {
         display: none;
 
-        &:checked ~ .accordion-header:after,
-        ~ .accordion-header:after {
+        &:checked ~ .accordion-title:after,
+        ~ .accordion-title:after {
             float: right;
             font-family: monospace;
         }
 
-        ~ .accordion-header:after {
+        ~ .accordion-title:after {
             content: '+';
         }
 
-        &:checked ~ .accordion-header:after {
+        &:checked ~ .accordion-title:after {
             content: '-';
         }
 

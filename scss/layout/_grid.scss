@@ -31,13 +31,13 @@
 }
 
 .go-unit {
-    &.unit-size-auto {
+    &.unit-auto {
         flex: none;
         width: auto;
     }
 
     @for $i from 1 through $grid-len {
-        &.unit-size-#{$i} {
+        &.unit-#{$i} {
             flex: none;
             width: ($i / $grid-len) * 100%;
         }
@@ -53,13 +53,13 @@
 @each $bp-name, $bp-size in $breakpoints {
     .go-unit {
         @include breakpoint-max($bp-size) {
-            &.unit-size-auto-#{$bp-name} {
+            &.unit-auto-#{$bp-name} {
                 flex: none;
                 width: auto;
             }
 
             @for $i from 1 through $grid-len {
-                &.unit-size-#{$i}-#{$bp-name} {
+                &.unit-#{$i}-#{$bp-name} {
                     flex: none;
                     width: ($i / $grid-len) * 100%;
                 }

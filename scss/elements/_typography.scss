@@ -3,6 +3,7 @@
 .font-family-inherit {
     font-family: inherit;
 }
+
 .font-size-inherit {
     font-size: inherit;
 }
@@ -28,27 +29,27 @@ h6,
 
 .h1,
 h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
 }
 
 .h2,
 h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .h3,
 h3 {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
 }
 
 .h4,
 h4 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 .h5,
 h5 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
 }
 
 .h6,
@@ -215,7 +216,8 @@ pre {
 
 // Text sizes
 
-@each $key, $val in $default-font-sizes {
+@each $key,
+$val in $default-font-sizes {
     .t-#{$key} {
         font-size: $val !important;
     }

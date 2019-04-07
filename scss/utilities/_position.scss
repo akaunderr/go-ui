@@ -1,58 +1,58 @@
 // Position
 .align-left {
-    text-align: left;
+    text-align: left !important;
 }
 
 .align-center {
-    text-align: center;
+    text-align: center !important;
 }
 
 .align-right {
-    text-align: right;
+    text-align: right !important;
 }
 
 .align-justify {
-    text-align: justify;
+    text-align: justify !important;
 }
 
 .align-start {
-    text-align: start;
+    text-align: start !important;
 }
 
 .align-end {
-    text-align: end;
+    text-align: end !important;
 }
 
 .content-start {
-    align-content: flex-start;
+    align-content: flex-start !important;
 }
 
 .content-end {
-    align-content: flex-end;
+    align-content: flex-end !important;
 }
 
 .content-center {
-    align-content: center;
+    align-content: center !important;
 }
 
 .content-between {
-    align-content: space-between;
+    align-content: space-between !important;
 }
 
 .content-around {
-    align-content: space-around;
+    align-content: space-around !important;
 }
 
 .content-stretch {
-    align-content: stretch;
+    align-content: stretch !important;
 }
 
 .flex-column {
-    flex-direction: column;
+    flex-direction: column !important;
 }
 
 .flex-wrap {
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
 }
 
 .flex-auto {
@@ -74,65 +74,65 @@
 }
 
 .items-start {
-    align-items: flex-start;
+    align-items: flex-start !important;
 }
 
 .items-end {
-    align-items: flex-end;
+    align-items: flex-end !important;
 }
 
 .items-center {
-    align-items: center;
+    align-items: center !important;
 }
 
 .items-baseline {
-    align-items: baseline;
+    align-items: baseline !important;
 }
 
 .items-stretch {
-    align-items: stretch;
+    align-items: stretch !important;
 }
 
 .justify-start {
-    justify-content: flex-start;
+    justify-content: flex-start !important;
 }
 
 .justify-end {
-    justify-content: flex-end;
+    justify-content: flex-end !important;
 }
 
 .justify-center {
-    justify-content: center;
+    justify-content: center !important;
 }
 
 .justify-between {
-    justify-content: space-between;
+    justify-content: space-between !important;
 }
 
 .justify-around {
-    justify-content: space-around;
+    justify-content: space-around !important;
 }
 
 .self-start {
-    align-self: flex-start;
+    align-self: flex-start !important;
 }
 
 .self-end {
-    align-self: flex-end;
+    align-self: flex-end !important;
 }
 
 .self-center {
-    -ms-grid-row-align: center;
-    align-self: center;
+    -ms-grid-row-align: center !important;
+    align-self: center !important;
 }
 
 .self-baseline {
-    align-self: baseline;
+    align-self: baseline !important;
 }
 
 .self-stretch {
-    -ms-grid-row-align: stretch;
-    align-self: stretch;
+    -ms-grid-row-align: stretch !important;
+    align-self: stretch !important;
 }
 
 @each $value in $positions {
