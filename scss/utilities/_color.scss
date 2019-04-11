@@ -2,7 +2,7 @@
 
 @each $key, $val in $backgrounds {
     .bg-#{$key} {
-        background: #{$val};
+        background-color: #{$val};
     }
 }
 

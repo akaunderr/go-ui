@@ -4,61 +4,53 @@
 */
 
 /*  Menu toggle */
-(function (window, document) {
-    var WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange' : 'resize';
-    var els = document.getElementsByClassName('nav-toggle');
+(function(window, document) {
+    var WINDOW_CHANGE_EVENT = "onorientationchange" in window ? "orientationchange" : "resize";
+    var els = document.getElementsByClassName("nav-toggle");
     var toggles = [];
 
-    Array.prototype.forEach.call(els, function (el) {
-        let navbar = document.getElementById(el.getAttribute('data-menu'));
-        let icon = el.getAttribute('data-icon');
-        let toggle_class = el.getAttribute('data-class');
+    // getElementsByClassName is HTMLCollection not an array !!!
+    Array.prototype.forEach.call(els, function(el) {
+        let m = document.getElementById(el.dataset.id);
+        let i = el.getElementsByTagName("i")[0];
 
+        // Create array instead HTMLCollection.
         toggles.push(el);
-        // navbar.getElementsByClass('.doc-menu-list').style = 'order: 999';
+        // put list element in the end
+        // navbar.getElementsByClass('.nav-menu-list').style = 'order: 999';
 
-        el.addEventListener('click', function (event) {
-            toggleMenu(navbar, toggle_class);
-            toggleIcon(icon);
+        el.addEventListener("click", function(event) {
+            toggleMenu(m);
+            toggleIcon(i);
             event.preventDefault();
         });
     });
 
     // close all menu after screen rotated or resized
-    window.addEventListener(WINDOW_CHANGE_EVENT, function () {
-        toggles.forEach(function (el) {
-            let navbar = document.getElementById(el.getAttribute('data-menu'));
-            let icon = el.getAttribute('data-icon');
-            let toggle_class = el.getAttribute('data-class');
+    window.addEventListener(WINDOW_CHANGE_EVENT, function() {
+        toggles.forEach(function(el) {
+            let m = document.getElementById(el.dataset.id);
+            let i = el.getElementsByTagName("i")[0];
 
-            closeMenu(navbar, icon, toggle_class);
+            closeMenu(m, i);
         });
     });
 
-    function toggleMenu(navbar, toggle_class) {
-        navbar.classList.toggle(toggle_class);
-    }
+    function closeMenu(m, i) {
+        if (m.classList.contains(m.dataset.class)) {
+            m.classList.remove(m.dataset.class);
 
-    function toggleIcon(icon) {
-        // classList returns undefined in ie11
-        if (icon && icon.classList) {
-            var svg = icon.getElementsByTagName('svg')[0];
-
-            // if FontAwesome 5
-            if (svg) {
-                (svg.getAttribute('data-icon') == 'bars')
-                    ? svg.setAttribute('data-icon', 'times')
-                    : svg.setAttribute('data-icon', 'bars');
+            if (i.classList.contains(i.dataset.icon)) {
+                i.classList.remove(i.dataset.icon);
             }
         }
     }
 
-    function closeMenu(navbar, icon, toggle_class) {
-        if (navbar.classList.contains(toggle_class)) {
-            navbar.classList.remove(toggle_class);
-            toggleIcon(icon);
-        }
+    function toggleMenu(m) {
+        m.classList.toggle(m.dataset.class);
     }
 
+    function toggleIcon(i) {
+        i.classList.toggle(i.dataset.icon);
+    }
 })(this, this.document);
-

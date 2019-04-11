@@ -4,11 +4,11 @@
 
     .go-media {
         @if ($bp-name == '') {
-            &.unit-#{$index} {
+            &.media-#{$index} {
                 max-width: calc(#{$a} - #{$b});
             }
         } @else {
-            &.unit-#{$index}-#{$bp-name} {
+            &.media-#{$index}-#{$bp-name} {
                 max-width: calc(#{$a} - #{$b});
             }
         }

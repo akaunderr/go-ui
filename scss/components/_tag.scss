@@ -2,20 +2,20 @@
 
 .go-tag {
     align-items: center;
-    display: inline-block;
-    font-family: monospace, monospace !important;
+    color: inherit;
+    display: inline;
     margin: 0 $min-space;
     overflow: hidden;
+    text-decoration: none;
     text-transform: uppercase;
     text-overflow: ellipsis;
     vertical-align: middle;
-    white-space: nowrap;
 
-    &::before {
-        content: '#';
-    }
 
-    > a {
-        text-decoration: none;
+    > .tag-hashtag,
+    &.tag-hashtag {
+        &::before {
+            content: "#";
+        }
     }
 }
