@@ -1861,8 +1861,7 @@ button,
 
 .go-tag {
     align-items: center;
-    color: inherit;
-    display: inline;
+    display: inline-block;
     margin: 0 2px;
     overflow: hidden;
     text-decoration: none;
