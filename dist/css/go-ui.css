@@ -6,8 +6,8 @@
  */
 :root {
     --c-m-0: #576674;
-    --c-m-1: #bcc4cc;
-    --c-m-2: #f7f8f9;
+    --c-m-1: #e7e9ee;
+    --c-m-2: #f1f2f3;
     --c-r-0: #dc3545;
     --c-r-1: #ffcccc;
     --c-r-2: #fdf7f7;
@@ -969,7 +969,7 @@ video.go-media {
 img.thumbnail,
 video.thumbnail {
     background: #fff;
-    border: 1px solid #bcc4cc;
+    border: 1px solid #e7e9ee;
     box-sizing: border-box;
     padding: 4px;
 }
@@ -1293,6 +1293,7 @@ code,
     color: #dc3545;
     vertical-align: bottom;
     word-break: break-word;
+    background-color: #e7e9ee;
 }
 
 a > code,
@@ -1323,11 +1324,11 @@ mark {
 }
 
 .mark {
-    background: #f7f8f9;
+    background: #fffccc;
 }
 
 pre {
-    background: #f7f8f9;
+    background: #e7e9ee;
     margin: 1rem 0;
     overflow: auto;
     padding: 1rem;
@@ -1535,7 +1536,7 @@ ul ol {
 
 button,
 .button {
-    border: 1px solid #f7f8f9;
+    border: 1px solid #f1f2f3;
     cursor: pointer;
     display: inline-block;
     padding: 10px;
@@ -1621,7 +1622,7 @@ button,
 .article-footer,
 .card-footer {
     align-items: stretch;
-    border-top: 1px solid #bcc4cc;
+    border-top: 1px solid #e7e9ee;
     display: flex;
     padding-top: 10px;
 }
@@ -1930,11 +1931,11 @@ button,
 }
 
 .border-m-1 {
-    border-color: #bcc4cc;
+    border-color: #e7e9ee;
 }
 
 .border-m-2 {
-    border-color: #f7f8f9;
+    border-color: #f1f2f3;
 }
 
 .border-r-0 {
@@ -2003,11 +2004,11 @@ button,
 }
 
 .bg-m-1 {
-    background-color: #bcc4cc;
+    background-color: #e7e9ee;
 }
 
 .bg-m-2 {
-    background-color: #f7f8f9;
+    background-color: #f1f2f3;
 }
 
 .bg-r-0 {
@@ -2075,11 +2076,11 @@ button,
 }
 
 .t-m-1 {
-    color: #bcc4cc !important;
+    color: #e7e9ee !important;
 }
 
 .t-m-2 {
-    color: #f7f8f9 !important;
+    color: #f1f2f3 !important;
 }
 
 .t-r-0 {
