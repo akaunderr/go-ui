@@ -101,10 +101,11 @@ blockquote {
 code,
 .code {
     color: $color-r-0;
+    background-color: $color-m-1;
+    border-radius: 3px;
     padding: 0.1rem 0.2rem;
     vertical-align: bottom;
     word-break: break-word;
-    background-color: $color-m-1;
 
     a > & {
         color: inherit;

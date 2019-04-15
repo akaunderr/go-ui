@@ -1291,10 +1291,11 @@ blockquote p {
 code,
 .code {
     color: #dc3545;
+    background-color: #e7e9ee;
+    border-radius: 3px;
     padding: 0.1rem 0.2rem;
     vertical-align: bottom;
     word-break: break-word;
-    background-color: #e7e9ee;
 }
 
 a > code,
