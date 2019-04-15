@@ -1291,6 +1291,7 @@ blockquote p {
 code,
 .code {
     color: #dc3545;
+    padding: 0.1rem 0.2rem;
     vertical-align: bottom;
     word-break: break-word;
     background-color: #e7e9ee;
