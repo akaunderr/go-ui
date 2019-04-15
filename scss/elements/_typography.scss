@@ -103,6 +103,7 @@ code,
     color: $color-r-0;
     vertical-align: bottom;
     word-break: break-word;
+    background-color: $color-m-1;
 
     a > & {
         color: inherit;
@@ -132,11 +133,11 @@ mark {
 }
 
 .mark {
-    background: $color-m-2;
+    background: $color-y-1;
 }
 
 pre {
-    background: $color-m-2;
+    background: $color-m-1;
     margin: 1rem 0;
     overflow: auto;
     padding: 1rem;
