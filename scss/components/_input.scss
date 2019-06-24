@@ -1,14 +1,11 @@
-.go-button {
+.go-input {
     border: 1px solid $color-m-1;
-    background-color: $color-m-2;
     color: $color-dark;
-    cursor: pointer;
     display: inline-block;
     padding: $min-space $min-space * 3;
-    
+
     &.disabled {
         background-color: $color-m-1;
         color: $color-m-0;
-        cursor: arrow;
     }
 }
