@@ -90,7 +90,8 @@ a {
 abbr[title] {
     border-bottom: none; /* 1 */
     text-decoration: underline; /* 2 */
-    text-decoration: underline dotted; /* 2 */
+    -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -169,7 +170,8 @@ select,
 textarea {
     font-family: inherit; /* 1 */
     font-size: 100%; /* 1 */
-    line-height: 1.15; /* 1 */
+    // line-height: 1.15; /* 1 */
+    line-height: 1.1; /* 1 */
     margin: 0; /* 2 */
 }
 
