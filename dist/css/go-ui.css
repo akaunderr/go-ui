@@ -3224,5 +3224,4 @@ ul ol {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap !important;
-  overflow-x: auto !important;
 }
