@@ -142,12 +142,13 @@ pre {
     background: $color-m-1;
     margin: 1rem 0;
     overflow: auto;
-    padding: 1rem;
+    padding: 0.1rem 0.2rem;
 
     code,
     .code {
-        display: block;
+        display: inline;
         word-break: normal;
+        padding:0.1rem 0.2rem;
         color: $color-b-0;
     }
 
