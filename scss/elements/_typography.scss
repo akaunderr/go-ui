@@ -100,8 +100,9 @@ blockquote {
 
 code,
 .code {
-    color: $color-r-0;
-    background-color: $color-m-1;
+    // color: $color-r-0;
+    color:  $color-b-0;
+    background-color: $color-m-2;
     border-radius: 3px;
     padding: 0.1rem 0.2rem;
     vertical-align: bottom;
@@ -139,22 +140,27 @@ mark {
 }
 
 pre {
-    background: $color-m-1;
-    margin: 1rem 0;
+    background: $color-m-2;
+    margin: $default-font-size * 0.5 0;
     overflow: auto;
     padding: 0.1rem 0.2rem;
+    border-radius: 3px;
 
     code,
     .code {
         display: inline;
         word-break: normal;
-        padding:0.1rem 0.2rem;
+        padding: 0;
         color: $color-b-0;
     }
 
-    &.pre-scrollable {
-        max-height: $pre-scrollable-max-height;
-        overflow-y: scroll;
+    &.scrollable {
+        height: auto;
+        max-height: attr(data-height rem);
+        word-break: normal !important;
+        word-wrap: normal !important;
+        white-space: pre-wrap;
+        overflow-y: auto;
     }
 }
 

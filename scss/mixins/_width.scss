@@ -1,0 +1,13 @@
+@mixin media($bp-name: '', $index: 0, $grid-len: 0) {
+    $a: ($index / $grid-len) * 100%;
+
+    @if ($bp-name == '') {
+        .go-width-#{$index} {
+            width: #{$a};
+        }
+    } @else {
+        .go-width-#{$index}-#{$bp-name} {
+            width: #{$a};
+        }
+    }
+}
