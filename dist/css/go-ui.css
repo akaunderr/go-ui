@@ -888,7 +888,6 @@ video.go-media {
     display: inline-block;
     height: auto;
     max-width: 100%;
-    margin: 2px;
     overflow: hidden;
     padding: 0;
     position: relative;
@@ -920,168 +919,168 @@ video.go-media embed {
     width: 100%;
 }
 
-.go-width-1 {
-    width: 8.33333%;
+.image-1 {
+    max-width: 8.33333%;
 }
 
-.go-width-2 {
-    width: 16.66667%;
+.image-2 {
+    max-width: 16.66667%;
 }
 
-.go-width-3 {
-    width: 25%;
+.image-3 {
+    max-width: 25%;
 }
 
-.go-width-4 {
-    width: 33.33333%;
+.image-4 {
+    max-width: 33.33333%;
 }
 
-.go-width-5 {
-    width: 41.66667%;
+.image-5 {
+    max-width: 41.66667%;
 }
 
-.go-width-6 {
-    width: 50%;
+.image-6 {
+    max-width: 50%;
 }
 
-.go-width-7 {
-    width: 58.33333%;
+.image-7 {
+    max-width: 58.33333%;
 }
 
-.go-width-8 {
-    width: 66.66667%;
+.image-8 {
+    max-width: 66.66667%;
 }
 
-.go-width-9 {
-    width: 75%;
+.image-9 {
+    max-width: 75%;
 }
 
-.go-width-10 {
-    width: 83.33333%;
+.image-10 {
+    max-width: 83.33333%;
 }
 
-.go-width-11 {
-    width: 91.66667%;
+.image-11 {
+    max-width: 91.66667%;
 }
 
-.go-width-12 {
-    width: 100%;
+.image-12 {
+    max-width: 100%;
 }
 
 @media only screen and (max-width: 1280px) {
-    .go-width-1-lg {
-        width: 8.33333%;
+    .image-1-lg {
+        max-width: 8.33333%;
     }
-    .go-width-2-lg {
-        width: 16.66667%;
+    .image-2-lg {
+        max-width: 16.66667%;
     }
-    .go-width-3-lg {
-        width: 25%;
+    .image-3-lg {
+        max-width: 25%;
     }
-    .go-width-4-lg {
-        width: 33.33333%;
+    .image-4-lg {
+        max-width: 33.33333%;
     }
-    .go-width-5-lg {
-        width: 41.66667%;
+    .image-5-lg {
+        max-width: 41.66667%;
     }
-    .go-width-6-lg {
-        width: 50%;
+    .image-6-lg {
+        max-width: 50%;
     }
-    .go-width-7-lg {
-        width: 58.33333%;
+    .image-7-lg {
+        max-width: 58.33333%;
     }
-    .go-width-8-lg {
-        width: 66.66667%;
+    .image-8-lg {
+        max-width: 66.66667%;
     }
-    .go-width-9-lg {
-        width: 75%;
+    .image-9-lg {
+        max-width: 75%;
     }
-    .go-width-10-lg {
-        width: 83.33333%;
+    .image-10-lg {
+        max-width: 83.33333%;
     }
-    .go-width-11-lg {
-        width: 91.66667%;
+    .image-11-lg {
+        max-width: 91.66667%;
     }
-    .go-width-12-lg {
-        width: 100%;
+    .image-12-lg {
+        max-width: 100%;
     }
 }
 
 @media only screen and (max-width: 1024px) {
-    .go-width-1-md {
-        width: 8.33333%;
+    .image-1-md {
+        max-width: 8.33333%;
     }
-    .go-width-2-md {
-        width: 16.66667%;
+    .image-2-md {
+        max-width: 16.66667%;
     }
-    .go-width-3-md {
-        width: 25%;
+    .image-3-md {
+        max-width: 25%;
     }
-    .go-width-4-md {
-        width: 33.33333%;
+    .image-4-md {
+        max-width: 33.33333%;
     }
-    .go-width-5-md {
-        width: 41.66667%;
+    .image-5-md {
+        max-width: 41.66667%;
     }
-    .go-width-6-md {
-        width: 50%;
+    .image-6-md {
+        max-width: 50%;
     }
-    .go-width-7-md {
-        width: 58.33333%;
+    .image-7-md {
+        max-width: 58.33333%;
     }
-    .go-width-8-md {
-        width: 66.66667%;
+    .image-8-md {
+        max-width: 66.66667%;
     }
-    .go-width-9-md {
-        width: 75%;
+    .image-9-md {
+        max-width: 75%;
     }
-    .go-width-10-md {
-        width: 83.33333%;
+    .image-10-md {
+        max-width: 83.33333%;
     }
-    .go-width-11-md {
-        width: 91.66667%;
+    .image-11-md {
+        max-width: 91.66667%;
     }
-    .go-width-12-md {
-        width: 100%;
+    .image-12-md {
+        max-width: 100%;
     }
 }
 
 @media only screen and (max-width: 768px) {
-    .go-width-1-sm {
-        width: 8.33333%;
+    .image-1-sm {
+        max-width: 8.33333%;
     }
-    .go-width-2-sm {
-        width: 16.66667%;
+    .image-2-sm {
+        max-width: 16.66667%;
     }
-    .go-width-3-sm {
-        width: 25%;
+    .image-3-sm {
+        max-width: 25%;
     }
-    .go-width-4-sm {
-        width: 33.33333%;
+    .image-4-sm {
+        max-width: 33.33333%;
     }
-    .go-width-5-sm {
-        width: 41.66667%;
+    .image-5-sm {
+        max-width: 41.66667%;
     }
-    .go-width-6-sm {
-        width: 50%;
+    .image-6-sm {
+        max-width: 50%;
     }
-    .go-width-7-sm {
-        width: 58.33333%;
+    .image-7-sm {
+        max-width: 58.33333%;
     }
-    .go-width-8-sm {
-        width: 66.66667%;
+    .image-8-sm {
+        max-width: 66.66667%;
     }
-    .go-width-9-sm {
-        width: 75%;
+    .image-9-sm {
+        max-width: 75%;
     }
-    .go-width-10-sm {
-        width: 83.33333%;
+    .image-10-sm {
+        max-width: 83.33333%;
     }
-    .go-width-11-sm {
-        width: 91.66667%;
+    .image-11-sm {
+        max-width: 91.66667%;
     }
-    .go-width-12-sm {
-        width: 100%;
+    .image-12-sm {
+        max-width: 100%;
     }
 }
 

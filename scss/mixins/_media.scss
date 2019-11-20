@@ -1,0 +1,13 @@
+@mixin media($bp-name: '', $index: 0, $grid-len: 0) {
+    $a: ($index / $grid-len) * 100%;
+
+    @if ($bp-name == '') {
+        &.image-#{$index} {
+            max-width: #{$a};
+        }
+    } @else {
+        &.image-#{$index}-#{$bp-name} {
+            max-width: #{$a};
+        }
+    }
+}
