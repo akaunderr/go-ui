@@ -166,7 +166,7 @@ pre {
 
 // Text utilities
 
-.t-hide {
+.text-hide {
     background: transparent;
     border: 0;
     color: transparent;
@@ -175,33 +175,33 @@ pre {
     text-shadow: none;
 }
 
-.t-lowercase {
+.text-lowercase {
     text-transform: lowercase !important;
 }
 
-.t-uppercase {
+.text-uppercase {
     text-transform: uppercase !important;
 }
 
-.t-capitalize {
+.text-capitalize {
     text-transform: capitalize !important;
 }
 
-.t-regular {
+.text-regular {
     font-weight: normal !important;
 }
 
-.t-bold {
+.text-bold {
     font-weight: bold !important;
 }
 
-.t-italic {
+.text-italic {
     font-style: italic !important;
 }
 
 // Text overflows
 
-.t-ellipsis {
+.text-ellipsis {
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -209,19 +209,19 @@ pre {
     flex-wrap: nowrap;
 }
 
-.t-clip {
+.text-clip {
     overflow: hidden;
     text-overflow: clip;
     white-space: nowrap;
 }
 
-.t-break-word {
+.text-break-word {
     word-break: break-word;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
 
-.t-break-all {
+.text-break-all {
     word-break: break-all !important;
 }
 
@@ -229,7 +229,7 @@ pre {
 
 @each $key,
 $val in $default-font-sizes {
-    .t-#{$key} {
+    .text-#{$key} {
         font-size: $val !important;
     }
 }

@@ -1,7 +1,7 @@
 /* Entries */
 
-.go-article,
-.go-card {
+.article,
+.card {
     display: flex;
     flex-direction: column;
 
@@ -22,23 +22,23 @@
     }
 }
 
-.go-article {
+.article {
     > [class^="article-"]:not(:last-child) {
         margin: 0 0 1rem 0;
     }
 }
-.go-card {
+.card {
     > [class^="card-"]:not(:last-child) {
         margin: 0 0 1rem 0;
     }
 }
 
-.go-article {
+.article {
     margin-top: 4 * $default-space;
     margin-bottom: 4 * $default-space;
 }
 
-.go-card {
+.card {
     background: $color-lite;
     padding: $default-space;
 }

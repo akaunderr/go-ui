@@ -40,7 +40,7 @@
 
 img,
 video {
-    &.go-media {
+    &.media {
         display: inline-block;
         height: auto;
         max-width: 100%;
@@ -50,7 +50,7 @@ video {
 }
 
 video {
-    &.go-media {
+    &.media {
         &::before {
             content: none;
             display: block;

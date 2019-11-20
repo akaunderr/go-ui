@@ -1,6 +1,6 @@
 /* Grid layout */
 
-.go-container {
+.container {
     margin-left: auto;
     margin-right: auto;
     padding-left: 2 * $default-space;
@@ -8,65 +8,65 @@
     width: 100%;
 }
 
-.go-grid {
+.g {
     align-content: flex-start;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 
-    &.grid-reverse {
+    &.g-reverse {
         flex-direction: row-reverse;
     }
 
-    &.grid-nowrap {
+    &.g-nowrap {
         flex-wrap: nowrap !important;
         overflow-x: auto !important;
     }
 
-    .go-unit {
+    .u {
         flex: 1;
         max-width: 100%;
         padding: 0 $min-space;
     }
 }
 
-.go-unit {
-    &.unit-auto {
+.u {
+    &.u-auto {
         flex: none;
         width: auto;
     }
 
     @for $i from 1 through $grid-len {
-        &.unit-#{$i} {
+        &.u-#{$i} {
             flex: none;
             width: ($i / $grid-len) * 100%;
         }
     }
 
     @for $i from 1 through $grid-len {
-        &.unit-offset-#{$i} {
+        &.u-offset-#{$i} {
             margin-left: ($i / $grid-len) * 100%;
         }
     }
 }
 
 @each $bp-name, $bp-size in $breakpoints {
-    .go-unit {
+    .u {
         @include breakpoint-max($bp-size) {
-            &.unit-auto-#{$bp-name} {
+            &.u-auto-#{$bp-name} {
                 flex: none;
                 width: auto;
             }
 
             @for $i from 1 through $grid-len {
-                &.unit-#{$i}-#{$bp-name} {
+                &.u-#{$i}-#{$bp-name} {
                     flex: none;
                     width: ($i / $grid-len) * 100%;
                 }
             }
 
             @for $i from 1 through $grid-len {
-                &.unit-offset-#{$i}-#{$bp-name} {
+                &.u-offset-#{$i}-#{$bp-name} {
                     margin-left: ($i / $grid-len) * 100%;
                 }
             }

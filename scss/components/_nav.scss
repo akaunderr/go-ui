@@ -1,6 +1,6 @@
 /* Navigation menu */
 
-.go-nav {
+.nav {
     align-items: center;
     box-sizing: border-box;
     color: $color-dark;
@@ -54,7 +54,7 @@
     }
 }
 
-.go-nav {
+.nav {
     &.nav-scrollable {
         flex-wrap: nowrap;
         overflow-y: hidden;
@@ -68,7 +68,7 @@
     }
 }
 
-.go-nav {
+.nav {
     &.nav-vertical {
         flex-direction: column;
         height: 100vh;
