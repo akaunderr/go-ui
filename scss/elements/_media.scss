@@ -44,17 +44,8 @@ video {
         display: inline-block;
         height: auto;
         max-width: 100%;
-        // margin: $min-space;
         overflow: hidden;
-        padding: 0;
         position: relative;
-    }
-
-    &.thumbnail {
-        background: #fff;
-        border: 1px solid $color-m-1;
-        box-sizing: border-box;
-        padding: 4px;
     }
 }
 
@@ -80,14 +71,3 @@ video {
     }
 }
 
-@for $i from 1 through $grid-len {
-    @include media('', $i, $grid-len);
-}
-
-@each $bp-name, $bp-size in $breakpoints {
-    @include breakpoint-max($bp-size) {
-        @for $i from 1 through $grid-len {
-            @include media($bp-name, $i, $grid-len);
-        }
-    }
-}
