@@ -27,48 +27,62 @@
         flex: 1;
         max-width: 100%;
         padding: 0 $min-space;
+        &.u-auto {
+            flex: none;
+        }
+
+        @for $i from 1 through $grid-len {
+            &.u-#{$i} {
+                flex: none;
+            }
+        }
+        @each $bp-name, $bp-size in $breakpoints {
+            @include breakpoint-max($bp-size) {
+                &.u-auto-#{$bp-name} {
+                    flex: none;
+                }
+
+                @for $i from 1 through $grid-len {
+                    &.u-#{$i}-#{$bp-name} {
+                        flex: none;
+                    }
+                }
+            }
+        }
     }
 }
 
-.u {
-    &.u-auto {
-        flex: none;
-        width: auto;
-    }
+.u-auto {
+    width: auto;
+}
 
-    @for $i from 1 through $grid-len {
-        &.u-#{$i} {
-            flex: none;
-            width: ($i / $grid-len) * 100%;
-        }
+@for $i from 1 through $grid-len {
+    .u-#{$i} {
+        width: ($i / $grid-len) * 100%;
     }
+}
 
-    @for $i from 1 through $grid-len {
-        &.u-offset-#{$i} {
-            margin-left: ($i / $grid-len) * 100%;
-        }
+@for $i from 1 through $grid-len {
+    .u-offset-#{$i} {
+        margin-left: ($i / $grid-len) * 100%;
     }
 }
 
 @each $bp-name, $bp-size in $breakpoints {
-    .u {
-        @include breakpoint-max($bp-size) {
-            &.u-auto-#{$bp-name} {
-                flex: none;
-                width: auto;
-            }
+    @include breakpoint-max($bp-size) {
+        &.u-auto-#{$bp-name} {
+            width: auto;
+        }
 
-            @for $i from 1 through $grid-len {
-                &.u-#{$i}-#{$bp-name} {
-                    flex: none;
-                    width: ($i / $grid-len) * 100%;
-                }
+        @for $i from 1 through $grid-len {
+            &.u-#{$i}-#{$bp-name} {
+                width: ($i / $grid-len) * 100%;
             }
+        }
 
-            @for $i from 1 through $grid-len {
-                &.u-offset-#{$i}-#{$bp-name} {
-                    margin-left: ($i / $grid-len) * 100%;
-                }
+        @for $i from 1 through $grid-len {
+            &.u-offset-#{$i}-#{$bp-name} {
+                margin-left: ($i / $grid-len) * 100%;
             }
         }
     }
